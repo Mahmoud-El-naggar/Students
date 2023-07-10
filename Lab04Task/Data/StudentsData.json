@@ -1,0 +1,54 @@
+{
+  "students": [
+    {
+      "name": "Mahmoud Elnagar",
+      "email": "mahmoud@example.com",
+      "address": "123st mansoura",
+      "phone": "011111111111",
+      "classNo": "5",
+      "gpa": "4",
+      "age": "25",
+      "id": 1
+    },
+    {
+      "name": "Ahmed Elnagar",
+      "email": "ahmed@example.com",
+      "address": "456 st alex",
+      "phone": "02222222222",
+      "classNo": "6",
+      "gpa": "4",
+      "age": "25",
+      "id": 2
+    },
+    {
+      "name": "Kareem ",
+      "email": "krkr@example.com",
+      "address": "12st sharqia",
+      "phone": "0154666666666",
+      "classNo": "3",
+      "gpa": "3.7",
+      "age": "20",
+      "id": 4
+    },
+    {
+      "name": "Abd Elrahman",
+      "email": "bedo@example.com",
+      "address": "13st cairo",
+      "phone": "01054654655",
+      "classNo": "3",
+      "gpa": "3.2",
+      "age": "20",
+      "id": 5
+    },
+    {
+      "name": "Reda",
+      "email": "reda@example.com",
+      "address": "10st mansoura",
+      "phone": "0106523186",
+      "classNo": "7",
+      "gpa": "2.6",
+      "age": "28",
+      "id": 3
+    }
+  ]
+}

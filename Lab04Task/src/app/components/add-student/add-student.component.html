@@ -1,0 +1,39 @@
+<h3 class="text-center m-3">Add Student</h3>
+<div class="text-center">
+    <div class="input-group offset-2 w-75  my-3">
+        <span class="input-group-text col-4 col-md-3">Name</span>
+        <input type="text" class="form-control" placeholder="Name" [(ngModel)]="name">
+    </div>
+    <div class="input-group offset-2 w-75 my-3">
+        <span class="input-group-text col-4 col-md-3">Email</span>
+        <input type="text" class="form-control" placeholder="Email" [(ngModel)]="email">
+    </div>
+    <div class="input-group offset-2 w-75 my-3">
+        <span class="input-group-text col-4 col-md-3">Address</span>
+        <input type="text" class="form-control ps-3" placeholder="Address" [(ngModel)]="address">
+    </div>
+    <div class="input-group offset-2 w-75 my-3">
+        <span class="input-group-text col-4 col-md-3">Phone</span>
+        <input type="text" class="form-control" placeholder="Phone" [(ngModel)]="phone">
+    </div>
+    <div class="input-group offset-2 w-75 my-3">
+        <span class="input-group-text col-4 col-md-3">Class No</span>
+        <input type="text" class="form-control ps-3" placeholder="Class No" [(ngModel)]="classNo">
+    </div>
+    <div class="input-group offset-2 w-75 my-3">
+        <span class="input-group-text col-4 col-md-3">GPA</span>
+        <input type="text" class="form-control ps-3" placeholder="GPA" [(ngModel)]="gpa">
+    </div>
+    <div class="input-group offset-2 w-75 my-3">
+        <span class="input-group-text col-4 col-md-3">Age</span>
+        <input type="text" class="form-control ps-3" placeholder="Age" [(ngModel)]="age">
+    </div>
+    <span class="text-success" *ngIf="addedSuccessfully">
+        Added Successfully
+    </span>
+    <div>
+        <input type="button" class="btn btn-outline-secondary offset-2 col-6 col-md-3 p-2 mb-3" value="Add Student"
+            (click)="addStudent()">
+    </div>
+
+</div>

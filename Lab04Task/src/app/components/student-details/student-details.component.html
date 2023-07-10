@@ -1,0 +1,62 @@
+<h3 class="text-center my-3">Student Details</h3>
+<div *ngIf="student; else Loading ">
+    <div class="card offset-1 col-10 my-4" aria-hidden="true">
+        <div class="card-body">
+            <h4 class="card-title">
+                Student:
+            </h4>
+            <div class="card-text bg-light px-4">
+                <div class="mb-2">
+                    <label class=" offset-sm-1 col-3 col-sm-4 col-md-2 mt-3 fs-5">Name : </label>
+                    <label class="fs-5"> {{student.name}}</label>
+                </div>
+
+                <div class="mb-2">
+                    <label class=" offset-sm-1 col-3 col-sm-4 col-md-2 fs-5">Email : </label>
+                    <label class="fs-5 "> {{student.email}}</label>
+                </div>
+                <div class="mb-2">
+                    <label class=" offset-sm-1 col-3 col-sm-4 col-md-2 fs-5">Address : </label>
+                    <label class="fs-5"> {{student.address}}</label>
+                </div>
+                <div class="mb-2">
+                    <label class=" offset-sm-1 col-3 col-sm-4 col-md-2 fs-5">Phone : </label>
+                    <label class="fs-5"> {{student.phone}}</label>
+                </div>
+                <div class="mb-2">
+                    <label class=" offset-sm-1 col-4 col-md-2  fs-5">Class No : </label>
+                    <label class="fs-5"> {{student.classNo}}</label>
+                </div>
+                <div class="mb-2">
+                    <label class=" offset-sm-1 col-3 col-sm-4 col-md-2  fs-5">GPA : </label>
+                    <label class="fs-5"> {{student.gpa}}</label>
+                </div>
+                <div class="mb-2">
+                    <label class=" offset-sm-1 col-3 col-sm-4 col-md-2 fs-5">Age : </label>
+                    <label class="fs-5"> {{student.age}}</label>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<ng-template #Loading>
+    <div class="card offset-2 col-8 my-3" aria-hidden="true">
+        <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+                <label class="fw-semibold d-block mt-3 mb-2 placeholder"></label>
+                <label class="fw-semibold d-block mb-2 placeholder"></label>
+                <label class="fw-semibold d-block mb-2 placeholder"> </label>
+                <label class="fw-semibold d-block mb-2 placeholder"></label>
+                <label class="fw-semibold d-block mb-2 placeholder"></label>
+                <label class="fw-semibold d-block mb-2 placeholder"></label>
+                <label class="fw-semibold d-block mb-2 placeholder"></label>
+
+            </p>
+        </div>
+    </div>
+</ng-template>

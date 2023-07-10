@@ -1,0 +1,53 @@
+<h3 class="text-center m-3">Students </h3>
+
+<div *ngIf="students ; else Loading">
+    <table class="table table-striped text-center col-10 m-0">
+        <thead class="col-10">
+            <tr>
+                <th class="col-1 ">ID</th>
+                <th class="col-2 ">Name</th>
+                <th class="col-2 ">Phone</th>
+                <th class="col-3 "></th>
+            </tr>
+        </thead>
+        <tbody class="col-10">
+            <tr *ngFor="let student of students">
+                <td class="align-middle">{{student.id}}</td>
+                <td class="align-middle">{{student.name}}</td>
+                <td class="align-middle">{{student.phone}}</td>
+                <td class="col-3"><a class="btn btn-outline-secondary m-1 align-middle"
+                        routerLink="/students/{{student.id}}">Details</a>
+                    <a class="btn btn-outline-secondary m-1 mx-sm-3" routerLink="/update/{{student.id}}">Update</a>
+                    <button class="btn btn-outline-secondary" (click)="confirmStudent(student)"
+                        data-bs-target="#deleteModal" data-bs-toggle="modal">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #Loading >
+    <div class="text-center" >
+        <button class="btn btn-secondary col-4" type="button" disabled>
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Loading...
+        </button>
+    </div>
+</ng-template>
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" *ngIf="studentToDelete">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Confirmation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Do You Want To Delete Student {{studentToDelete.name}} ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="deleteStudent(studentToDelete)"
+                    data-bs-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
